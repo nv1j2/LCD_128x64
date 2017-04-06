@@ -1,0 +1,5 @@
+不要把
+fopen("...","...");fscanf,fprintf,fclose //读时把\r\n替换成\n，写时把\n替换成\r\n;读到\x1a就设置EOF;读写的内容当字符看待
+和
+fopen("...","...b");fread,fwrite,fclose  //不作以上替换，遇到\x1a仍继续读;读写的内容当字节看待
+弄混了

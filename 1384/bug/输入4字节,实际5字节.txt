@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+#include <windows.h>
+#include <time.h>
+#include <string.h>
+#include <math.h>
+
+#pragma pack(2)
+
+typedef unsigned short WORD;/*定义WORD为两个字节的类型*/
+
+int main(){
+	WORD temp;
+	
+	FILE *fpw;
+	fpw=fopen("test1.dat","a");
+
+
+
+	temp = 0;
+	fwrite(&temp,sizeof(temp),1,fpw);
+
+	temp = 10;
+	fwrite(&temp,sizeof(temp),1,fpw);
+
+
+	fclose(fpw);
+
+
+
+
+	return 0;
+}
